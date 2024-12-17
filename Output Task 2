@@ -1,0 +1,62 @@
+Library Management System
+1. Add a new item
+2. Display all items
+3. Check out an item
+4. Return an item
+5. Exit
+Enter your choice (1-5): 1
+Enter the title: marvel
+Enter the category (Book/Magazine/DVD): Book
+'marvel' added to the library.
+
+Library Management System
+1. Add a new item
+2. Display all items
+3. Check out an item
+4. Return an item
+5. Exit
+Enter your choice (1-5): 1
+Enter the title: Disney
+Enter the category (Book/Magazine/DVD): Magazine
+'Disney' added to the library.
+
+Library Management System
+1. Add a new item
+2. Display all items
+3. Check out an item
+4. Return an item
+5. Exit
+Enter your choice (1-5): 2
+
+Library Items:
+Title: marvel, Category: Book, Status: Available
+Title: Disney, Category: Magazine, Status: Available
+
+Library Management System
+1. Add a new item
+2. Display all items
+3. Check out an item
+4. Return an item
+5. Exit
+Enter your choice (1-5): 3
+Enter the title of the item to check out: marvel
+'marvel' has been checked out.
+
+Library Management System
+1. Add a new item
+2. Display all items
+3. Check out an item
+4. Return an item
+5. Exit
+Enter your choice (1-5): 4
+Enter the title of the item to return: marvel
+'marvel' has been returned.
+
+Library Management System
+1. Add a new item
+2. Display all items
+3. Check out an item
+4. Return an item
+5. Exit
+Enter your choice (1-5): 5
+Exiting the Library Management System. Goodbye!
