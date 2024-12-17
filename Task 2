@@ -1,0 +1,73 @@
+library = []  # List to store library items
+
+def add_item():
+    """Add a new item to the library."""
+    title = input("Enter the title: ")
+    category = input("Enter the category (Book/Magazine/DVD): ")
+    library.append({"title": title, "category": category, "status": "Available"})
+    print(f"'{title}' added to the library.")
+
+def display_items():
+    """Display all items in the library."""
+    if not library:
+        print("No items in the library.")
+    else:
+        print("\nLibrary Items:")
+        for item in library:
+            print(f"Title: {item['title']}, Category: {item['category']}, Status: {item['status']}")
+
+def check_out_item():
+    """Check out an item by title."""
+    title = input("Enter the title of the item to check out: ")
+    for item in library:
+        if item["title"].lower() == title.lower():
+            if item["status"] == "Available":
+                item["status"] = "Checked Out"
+                print(f"'{title}' has been checked out.")
+                return
+            else:
+                print(f"'{title}' is already checked out.")
+                return
+    print(f"No item found with the title '{title}'.")
+
+def return_item():
+    """Return an item by title."""
+    title = input("Enter the title of the item to return: ")
+    for item in library:
+        if item["title"].lower() == title.lower():
+            if item["status"] == "Checked Out":
+                item["status"] = "Available"
+                print(f"'{title}' has been returned.")
+                return
+            else:
+                print(f"'{title}' was not checked out.")
+                return
+    print(f"No item found with the title '{title}'.")
+
+def main():
+    while True:
+        print("\nLibrary Management System")
+        print("1. Add a new item")
+        print("2. Display all items")
+        print("3. Check out an item")
+        print("4. Return an item")
+        print("5. Exit")
+
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == '1':
+            add_item()
+        elif choice == '2':
+            display_items()
+        elif choice == '3':
+            check_out_item()
+        elif choice == '4':
+            return_item()
+        elif choice == '5':
+            print("Exiting the Library Management System. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
